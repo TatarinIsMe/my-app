@@ -30,7 +30,7 @@ const Chat = () => {
 
         fetch('http://tatarin.site/back/web/post/ajax', {
         method: 'POST',
-        referrerPolicy: "unsafe_url",
+        referrerPolicy: "unsafe_url", 
         headers: {
           'Content-Type': 'application/json'
         },
