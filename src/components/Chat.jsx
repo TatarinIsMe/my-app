@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { useEffect } from "react";
-// import $ from "jquery";
+import $ from "jquery";
 
 import styles from "../styles/Chat.module.css";
 import Messages from "./Messages";
@@ -12,43 +12,43 @@ const Chat = () => {
         const data = {
             name: 'textMes',
           };
-//               $.ajax({
-//         // url: 'http://localhost:8888/basic/web/index.php?r=post%2Findex',
-//     //    url: 'http://localhost:8888/basic/web/post/ajax',
-//         url: 'http://tatarin.site/back/web/post/ajax',
-//         type: 'post',
-//         dataType: 'json',
-//         data: {param1: textMes},
-//         success: function(res){
-//             console.log('hi');
-//         },
-//         error: function(er){
-//             console.log(er.responseText);
-//             setState((_state) => [..._state, {user: "admin", message: er.responseText}])
-//         }
-// });
-
-        fetch('http://tatarin.site/back/web/post/ajax', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
+              $.ajax({
+        // url: 'http://localhost:8888/basic/web/index.php?r=post%2Findex',
+    //    url: 'http://localhost:8888/basic/web/post/ajax',
+        url: 'http://tatarin.site/back/web/post/ajax',
+        type: 'post',
+        dataType: 'json',
+        data: {param1: textMes},
+        success: function(res){
+            console.log('hi');
         },
-        // body: JSON.stringify({params1: "privet"})
-        body: JSON.stringify("privet")
-      })
-      .then(response => {
-        if (response.ok) {
-          console.log('Data sent successfully!');
-          response.text().then(value => {
-            console.log(value);
-          });
-        } else {
-          console.log('Failed to send data');
+        error: function(er){
+            console.log(er.responseText);
+            setState((_state) => [..._state, {user: "admin", message: er.responseText}])
         }
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+});
+
+    //     fetch('http://tatarin.site/back/web/post/ajax', {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json'
+    //     },
+    //     // body: JSON.stringify({params1: "privet"})
+    //     body: JSON.stringify("privet")
+    //   })
+    //   .then(response => {
+    //     if (response.ok) {
+    //       console.log('Data sent successfully!');
+    //       response.text().then(value => {
+    //         console.log(value);
+    //       });
+    //     } else {
+    //       console.log('Failed to send data');
+    //     }
+    //   })
+    //   .catch(error => {
+    //     console.error('Error:', error);
+    //   });
 
     
 
