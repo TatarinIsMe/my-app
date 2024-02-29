@@ -28,27 +28,27 @@ const Chat = () => {
 //         }
 // });
 
-    //     fetch('http://tatarin.site/back/web/post/ajax', {
-    //     method: 'POST',
-    //     headers: {
-    //       'Content-Type': 'application/json'
-    //     },
-    //     // body: JSON.stringify({params1: "privet"})
-    //     body: JSON.stringify("privet")
-    //   })
-    //   .then(response => {
-    //     if (response.ok) {
-    //       console.log('Data sent successfully!');
-    //       response.text().then(value => {
-    //         console.log(value);
-    //       });
-    //     } else {
-    //       console.log('Failed to send data');
-    //     }
-    //   })
-    //   .catch(error => {
-    //     console.error('Error:', error);
-    //   });
+        fetch('http://tatarin.site/back/web/post/ajax', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        // body: JSON.stringify({params1: "privet"})
+        body: JSON.stringify("privet")
+      })
+      .then(response => {
+        if (response.ok) {
+          console.log('Data sent successfully!');
+          response.text().then(value => {
+            console.log(value);
+          });
+        } else {
+          console.log('Failed to send data');
+        }
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
 
     
 
